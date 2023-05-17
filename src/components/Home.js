@@ -26,28 +26,32 @@ const Home = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="container grid grid-cols-none md:grid-cols-12 lg:grid-cols-12 justify-center md:gap-5 h-full ">
+    <div className="container grid grid-cols-none md:grid-cols-12 justify-center sm:gap-3 md:gap-5  h-full sm:ml-7 md:ml-0 md:pr-5">
       {/* Column one */}
-      <div className=" text-lg md:bg-black text-grey-300 pt-8 col-span-2 md:col-span-3 lg:col-span-3 xl:col-span-2">
+      <div className="text-lg bg-[#17161A] text-grey-300 pt-8 md:pt-5 col-span-2 md:col-span-3 lg:col-span-3 xl:col-span-2">
         <div className="flex justify-center">
-          <img className="hidden md:block fixed " src={Logo} alt="Logo" />
+          <img
+            className="hidden md:block fixed cursor-pointer "
+            src={Logo}
+            alt="Logo"
+          />
         </div>
 
-        <div className="hidden md:block fixed lg:ml-12 lg:mt-14  ">
+        <div className="hidden md:block fixed md:ml-6 md:mt-14 lg:ml-12 lg:mt-14  ">
           <SideBar />
         </div>
       </div>
 
       {/* Column Two  */}
-      <div className="col-span-3 md:col-span-9 lg:col-span-9 lg:pr-6 xl:col-span-7 text-[#F3E7E7] md:pt-8 px-3 md:px-2 lg:px-0">
-        <div className="flex flex-row justify-between ">
+      <div className="col-span-4 md:col-span-9 lg:col-span-9 lg:pr-6 xl:col-span-7 text-[#F3E7E7] md:pt-5 px-3 md:px-2 lg:px-0">
+        <div className="flex flex-row justify-between">
           <div className="md:hidden">
             <div
-              className="cursor-pointer w-12 md:hidden  "
+              className="cursor-pointer w-24 md:hidden  "
               onClick={() => setOpen(!open)}
             >
               {open ? (
-                <div className="bg-[#1E1E1E] left-0  w-7/12">
+                <div className=" left-0  w-7/12">
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -64,7 +68,7 @@ const Home = () => {
                   </svg>
                 </div>
               ) : (
-                <div className="bg-[#17161A]  w-7/12">
+                <div className="  w-7/12">
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -86,7 +90,7 @@ const Home = () => {
             {open ? (
               <div
                 className={
-                  " bg-[#1E1E1E] left-0 w-7/12 h-full  absolute md:hidden "
+                  " bg-[#1E1E1E] left-0 h-screen w-7/12 absolute md:hidden "
                 }
               >
                 <SideBar />
@@ -113,16 +117,16 @@ const Home = () => {
                 />
               </svg>
             </div>
-            <div>
+            <div className="mr-2">
               <input
-                className="text-[#F3E7E7] bg-[#5B5858] w-32 md:w-64 lg:w-96 px-10 py-3 rounded-lg "
+                className="text-[#F3E7E7] bg-[#5B5858] w-full sm:w-96 md:w-64 lg:w-96 px-10 py-3 rounded-lg "
                 type=""
                 placeholder="Search artists, songs, podcasts..."
               />
             </div>
           </div>
 
-          <div className="flex flex-row gap-3 ">
+          <div className="flex flex-row gap-6 md:gap-3 lg:gap-3 xl:gap-3 ">
             <div className="w-4 md:w-8 cursor-pointer">
               <svg
                 width="36"
@@ -153,12 +157,12 @@ const Home = () => {
               </svg>
             </div>
             <div className="hidden md:flex pt-1">WakaWaka Boy</div>
-            <div>
+            <div className="hidden md:block lg:block xl:block">
               <img className="pl-3 md:pl:0" src={Icon} alt="Profile Picture" />
             </div>
             <div className="mt-3 cursor-pointer">
               <svg
-                width="16"
+                width="26"
                 height="8"
                 viewBox="0 0 16 8"
                 fill="none"
@@ -170,19 +174,19 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-10 mb-36 ">
+        <div className="flex flex-col  gap-2 lg:gap-2 mb-36 ">
           <div className="mt-8 md:relative">
             <img
               className=" md:absolute mix-blend-normal md:mix-blend-plus-lighter"
               src={Ayra}
               alt="Ayra Starr"
             />
-            <div className=" -mt-24 md:-mt-0 p-2 md:p-2 lg:-mt-0 lg:p-5  ">
-              <div className="text-sm font-light mb-1 md:mb-4 lg:mb-7 -mt-3 md:-mt-0 tracking-wide">
+            <div className=" -mt-24 sm:-mt-44 md:-mt-0 p-2 md:p-2 lg:-mt-0 lg:p-5  ">
+              <div className="text-sm font-light mb-1 sm:mb-4 md:mb-4 lg:mb-7 -mt-3 md:-mt-0 tracking-wide">
                 TOP ARTISTES
               </div>
               <div className="flex flex-row gap-2 md:gap-2 lg:gap-5 md:mb-1 lg:mb-3 ">
-                <div className="text-lg md:text-3xl font-bold tracking-wider">
+                <div className="text-lg sm:text-xl md:text-3xl md:mb-5 lg:mb-3 font-bold tracking-wider">
                   AYRA STARR
                 </div>
                 <div className="mt-1 md:mt-2 ">
@@ -202,10 +206,10 @@ const Home = () => {
                   </svg>
                 </div>
               </div>
-              <div className="hidden md:flex flex-row gap-2">
+              <div className="hidden sm:block  md:flex lg:flex flex-row gap-2 sm:-mt-5">
                 <div className="">
                   <svg
-                    width="21 sm"
+                    width="21"
                     height="21"
                     viewBox="0 0 21 21"
                     fill="none"
@@ -228,11 +232,11 @@ const Home = () => {
                     />
                   </svg>
                 </div>
-                <div className="text-sm  font-light tracking-wider">
+                <div className="text-sm sm:text-lg font-light tracking-wider">
                   1.5million monthly listeners
                 </div>
               </div>
-              <div className="flex flex-row gap-2 bg-[#F3E7E7] w-32 md:w-36 p-2 mt-1 md:mt-3 lg:mt-10 rounded-lg">
+              <div className="flex flex-row gap-2 bg-[#F3E7E7] w-32 md:w-36 p-2 mt-1 sm:mt-4 md:mt-1 lg:mt-4 rounded-lg">
                 <div className="mt-1">
                   <svg
                     width="25"
@@ -260,13 +264,13 @@ const Home = () => {
 
           {/* Recently Played */}
 
-          <div className="container mx-auto -mt-5 lg:mt-5">
-            <div className="flex justify-between px-2 md:px-0 mt-5">
+          <div className="mt-5">
+            <div className="flex justify-between px-2 md:px-0 mt-1 sm:mt-7 lg:mt-5 ">
               <div className="text-xl font-bold mb-3 ">Recently Played</div>
               <div className=" cursor-pointer hover:underline">Show all</div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-2 md:gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4  gap-2 md:gap-3">
               {/* <Swiper
                 spaceBetween={5}
                 slidesPerView={2}
@@ -274,6 +278,13 @@ const Home = () => {
                 onSwiper={(swiper) => console.log(swiper)}
               > */}
               {/* <SwiperSlide> */}
+              <div className="bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2  cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
+                <img src={Zino} alt="Zino" className="w-full " />
+                <div className="py-3">
+                  <div className="text-lg font-semibold">Mapariwo</div>
+                  <div>Zinolesky</div>
+                </div>
+              </div>
               <div className=" bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300 ">
                 <img
                   src={Asa}
@@ -298,7 +309,14 @@ const Home = () => {
               {/* </SwiperSlide> */}
 
               {/* <SwiperSlide> */}
-              <div className="bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2  cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
+              <div className="bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300 ">
+                <img src={Tattoo} alt="Nasty" className="w-full " />
+                <div className="py-3">
+                  <div className="text-lg font-semibold">Lonely</div>
+                  <div>Nasty C</div>
+                </div>
+              </div>
+              <div className="lg:hidden xl:hidden bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2  cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
                 <img src={Justin} alt="Justin" className="w-full" />
                 <div className="py-3">
                   <div className="text-lg font-semibold">Ghost</div>
@@ -308,7 +326,7 @@ const Home = () => {
               {/* </SwiperSlide> */}
 
               {/* <SwiperSlide> */}
-              <div className="bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
+              <div className="lg:hidden xl:hidden  bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
                 <img src={Bandana} alt="Fireboy" className="w-full" />
                 <div className="py-3">
                   <div className="text-lg font-semibold">Bandana ft Asake</div>
@@ -327,7 +345,7 @@ const Home = () => {
               <div className="cursor-pointer hover:underline">Show all</div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3">
               <div className="bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300 ">
                 <img src={Tattoo} alt="Nasty" className="w-full " />
                 <div className="py-3">
@@ -359,18 +377,33 @@ const Home = () => {
                   <div>Asa</div>
                 </div>
               </div>
+
+              <div className="lg:hidden xl:hidden bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
+                <img src={Bandana} alt="Fireboy" className="w-full" />
+                <div className="py-3 hidden sm:block">
+                  <div className="text-lg font-semibold">Friday Feeling</div>
+                  <div>Fireboy DML </div>
+                </div>
+              </div>
+              <div className="lg:hidden xl:hidden bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
+                <img src={Rush} alt="Rush" className="w-full" />
+                <div className="py-3">
+                  <div className="text-lg font-semibold">Stability</div>
+                  <div>Ayra Star</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Footer  */}
-        <div className="hidden md:block lg:block ">
+        <div className="hidden md:hidden lg:hidden xl:block ">
           <Footer />
         </div>
       </div>
 
       {/* Column Three */}
-      <div className="col-span-4 -mt-32  lg:-mt-0  md:col-span-12 md:ml-48  xl:ml-0 lg:col-span-12  xl:col-span-3 text-[#F3E7E7] flex flex-col bg-[#17161A] px-5 h-full ">
+      <div className="col-span-4 -mt-32 xl:-mt-3 md:col-span-12 md:ml-48 lg:ml-64 xl:ml-0 lg:col-span-12 xl:col-span-3 text-[#F3E7E7] flex flex-col px-5 h-full ">
         <div className="pt-8">
           <div className="text-2xl font-bold">Hotlist</div>
           {/* Trending Songs */}
@@ -1085,6 +1118,10 @@ const Home = () => {
               </ul>
             </div>
           </div>
+        </div>
+        {/* Footer  */}
+        <div className=" md:block lg:block xl:hidden">
+          <Footer />
         </div>
       </div>
     </div>

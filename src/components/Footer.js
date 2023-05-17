@@ -9,8 +9,8 @@ import {
 function Footer() {
   return (
     <div>
-      <div className="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 gap-7 sm:gap-14 text-md md:gap-12 md:ml-52 lg:ml-0 mt-16 md:mt-10 mx-5 mb-10">
-        <ul className="leading-8 col-span-3 sm:col-span-2 md:col-span-3">
+      <div className="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 gap-7 sm:gap-14 text-md md:gap-12 lg:ml-0 mt-28 lg:mt-24 mx-5 md:mx-2 mb-10">
+        <ul className="leading-8 col-span-6 sm:col-span-2 md:col-span-3">
           <li className="font-bold">Company</li>
           <li>
             <a className="hover:underline " href="">
@@ -29,7 +29,7 @@ function Footer() {
           </li>
         </ul>
 
-        <ul className="leading-8 col-span-5 sm:col-span-3 md:col-span-3 ">
+        <ul className="leading-8 col-span-6 sm:col-span-3 md:col-span-3 ">
           <li className="font-bold">Useful Links</li>
           <li>
             <a className="hover:underline " href="">
@@ -43,7 +43,7 @@ function Footer() {
           </li>
         </ul>
 
-        <ul className="leading-8 col-span-4 sm:col-span-3 md:col-span-3">
+        <ul className="leading-8 col-span-6 sm:col-span-3 md:col-span-3">
           <li className="font-bold">Communities</li>
           <li>
             <a className="hover:underline " href="">
@@ -72,7 +72,7 @@ function Footer() {
           </li> */}
         </ul>
 
-        <ul className="leading-8 col-span-5 sm:col-span-3 md:col-span-3">
+        <ul className="leading-8 col-span-6 sm:col-span-3 md:col-span-3">
           <li className="font-bold">Social Media</li>
 
           <li>

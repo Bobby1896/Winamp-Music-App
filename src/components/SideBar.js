@@ -3,14 +3,14 @@ import { FaRegCopyright } from "react-icons/fa";
 
 function SideBar() {
   return (
-    <div className=" flex flex-col items-center gap-7 pt-10 md:pt-0 md:gap-16 text-[#F3E7E7] ">
+    <div className=" flex flex-col items-center gap-7 pt-10 md:pt-0 text-[#F3E7E7] ">
       <div className="">
         <div className="">
-          <div className="hidden md:block  mt-5 mb-5 pr-16 uppercase text-center">
+          <div className="hidden md:block mt-5 mb-5 md:mb-2 pr-16 uppercase text-center">
             Menu
           </div>
           <ul className="">
-            <li className="pb-2   ">
+            <li className="pb-2 md:pb-1   ">
               <div className="flex flex-row gap-3 pt-0.5 hover:bg-[#5B585833] hover: h-9">
                 <div className=" w-7 ">
                   <svg
@@ -33,7 +33,7 @@ function SideBar() {
                 </a>
               </div>
             </li>
-            <li className="pb-2 ">
+            <li className="pb-2 md:pb-1 ">
               <div className="flex flex-row gap-3 pt-0.5 hover:bg-[#5B585833] hover: h-9 ">
                 <div className=" w-7 ">
                   <svg
@@ -52,7 +52,7 @@ function SideBar() {
                 <a href="#">Explore</a>
               </div>
             </li>
-            <li className="pb-2">
+            <li className="pb-2 md:pb-1">
               <div className="flex flex-row gap-3 pt-0.5 hover:bg-[#5B585833] hover: h-9">
                 <div className=" w-7">
                   <svg
@@ -83,7 +83,7 @@ function SideBar() {
                 <a href="#">Podcast</a>
               </div>
             </li>
-            <li className="pb-2">
+            <li className="pb-2 md:pb-1">
               <div className="flex flex-row gap-3 pt-0.5 hover:bg-[#5B585833] hover: h-9 ">
                 <div className=" w-7">
                   <svg
@@ -106,7 +106,7 @@ function SideBar() {
                 <a href="#">Playlist</a>
               </div>
             </li>
-            <li className="pb-2">
+            <li className="pb-2 md:pb-1">
               <div className="flex flex-row gap-3 pt-0.5 hover:bg-[#5B585833] hover: h-9  ">
                 <div className=" w-7">
                   <svg
@@ -127,7 +127,7 @@ function SideBar() {
                 <a href="#">Favourites</a>
               </div>
             </li>
-            <li className="pb-2">
+            <li className="pb-2 md:pb-1">
               <div className="flex flex-row gap-3  pt-0.5 hover:bg-[#5B585833] hover: h-9 ">
                 <div className=" w-7">
                   <svg
@@ -150,11 +150,11 @@ function SideBar() {
         </div>
 
         <div className="">
-          <div className="hidden md:block text-center pr-16 mb-5 mt-4">
+          <div className="hidden md:block text-center pr-16 mb-5 md:mb-2 mt-4 md:mt-2">
             PLAYLIST
           </div>
           <ul>
-            <li className="pb-2">
+            <li className="pb-2 md:pb-1">
               <div className="flex flex-row gap-3 pt-0.5 hover:bg-[#5B585833] hover: h-9 ">
                 <div className=" w-7">
                   <svg
@@ -177,7 +177,7 @@ function SideBar() {
                 <a href="#">Traffic Vibez</a>
               </div>
             </li>
-            <li className="pb-2">
+            <li className="pb-2 md:pb-1">
               <div className="flex flex-row gap-3  pt-0.5 hover:bg-[#5B585833] hover: h-9 ">
                 <div className=" w-7">
                   <svg
@@ -200,7 +200,7 @@ function SideBar() {
                 <a href="#">Work</a>
               </div>
             </li>
-            <li className="pb-2">
+            <li className="pb-2 md:pb-1">
               <div className="flex flex-row gap-3 justify-center pt-0.5 hover:bg-[#5B585833] hover: h-9 ">
                 <div className=" w-7">
                   <svg
@@ -245,7 +245,7 @@ function SideBar() {
           </ul>
         </div>
 
-        <div className="flex flex-row gap-3 pt-0.5 mb-5 hover:bg-[#5B585833] hover: h-9 hover: w-32 cursor-pointer mt-4">
+        <div className="flex flex-row gap-3 pt-0.5 mb-5 hover:bg-[#5B585833] hover: h-9 hover: w-32 cursor-pointer mt-4 md:mt-2">
           <div className=" w-7">
             <svg
               width="19"
