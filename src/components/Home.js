@@ -162,7 +162,7 @@ const Home = () => {
             </div>
             <div className="mt-3 cursor-pointer">
               <svg
-                width="26"
+                width=""
                 height="8"
                 viewBox="0 0 16 8"
                 fill="none"
@@ -185,7 +185,7 @@ const Home = () => {
               <div className="text-sm font-light mb-1 sm:mb-4 md:mb-4 lg:mb-7 -mt-3 md:-mt-0 tracking-wide">
                 TOP ARTISTES
               </div>
-              <div className="flex flex-row gap-2 md:gap-2 lg:gap-5 md:mb-1 lg:mb-3 ">
+              <div className="flex flex-row gap-2 md:gap-2 lg:gap-5 md:mb-1 lg:mb-2">
                 <div className="text-lg sm:text-xl md:text-3xl md:mb-5 lg:mb-3 font-bold tracking-wider">
                   AYRA STARR
                 </div>
@@ -206,7 +206,7 @@ const Home = () => {
                   </svg>
                 </div>
               </div>
-              <div className="hidden sm:block  md:flex lg:flex flex-row gap-2 sm:-mt-5">
+              <div className="hidden sm:flex md:flex lg:flex flex-row gap-2 sm:mt-3 md:-mt-5 lg:-mt-3">
                 <div className="">
                   <svg
                     width="21"
@@ -278,18 +278,24 @@ const Home = () => {
                 onSwiper={(swiper) => console.log(swiper)}
               > */}
               {/* <SwiperSlide> */}
-              <div className="bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2  cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
-                <img src={Zino} alt="Zino" className="w-full " />
+
+              <div className=" bg-[#b8b4b415] rounded-md hover:bg-[#5B585833]  hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
+                <img
+                  src={Bandana}
+                  alt="Fireboy"
+                  className="w-full hover:opacity-30"
+                />
                 <div className="py-3">
-                  <div className="text-lg font-semibold">Mapariwo</div>
-                  <div>Zinolesky</div>
+                  <div className="text-lg font-semibold">Bandana ft Asake</div>
+                  <div>Fireboy DML </div>
                 </div>
               </div>
-              <div className=" bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300 ">
+
+              <div className=" bg-[#b8b4b415] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300 ">
                 <img
                   src={Asa}
                   alt="Mayana"
-                  className="w-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300"
+                  className="w-full hover:opacity-30"
                 />
                 <div className="py-3">
                   <div className="text-lg font-semibold ">Mayana</div>
@@ -299,8 +305,12 @@ const Home = () => {
               {/* </SwiperSlide> */}
 
               {/* <SwiperSlide> */}
-              <div className="bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
-                <img src={Rush} alt="Rush" className="w-full" />
+              <div className="bg-[#b8b4b415] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
+                <img
+                  src={Rush}
+                  alt="Rush"
+                  className="w-full hover:opacity-30"
+                />
                 <div className="py-3">
                   <div className="text-lg font-semibold">Rush</div>
                   <div>Ayra Star</div>
@@ -309,28 +319,43 @@ const Home = () => {
               {/* </SwiperSlide> */}
 
               {/* <SwiperSlide> */}
-              <div className="bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300 ">
-                <img src={Tattoo} alt="Nasty" className="w-full " />
-                <div className="py-3">
-                  <div className="text-lg font-semibold">Lonely</div>
-                  <div>Nasty C</div>
-                </div>
-              </div>
-              <div className="lg:hidden xl:hidden bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2  cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
-                <img src={Justin} alt="Justin" className="w-full" />
+
+              <div className=" bg-[#b8b4b415] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2  cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
+                <img
+                  src={Justin}
+                  alt="Justin"
+                  className="w-full hover:opacity-30"
+                />
                 <div className="py-3">
                   <div className="text-lg font-semibold">Ghost</div>
                   <div>Justin Bieber</div>
                 </div>
               </div>
+
+              <div className="lg:hidden xl:hidden bg-[#b8b4b415] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300 ">
+                <img
+                  src={Tattoo}
+                  alt="Nasty"
+                  className="w-full hover:opacity-30"
+                />
+                <div className="py-3">
+                  <div className="text-lg font-semibold">Lonely</div>
+                  <div>Nasty C</div>
+                </div>
+              </div>
               {/* </SwiperSlide> */}
 
               {/* <SwiperSlide> */}
-              <div className="lg:hidden xl:hidden  bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
-                <img src={Bandana} alt="Fireboy" className="w-full" />
+
+              <div className="lg:hidden xl:hidden bg-[#b8b4b415] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2  cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
+                <img
+                  src={Zino}
+                  alt="Zino"
+                  className="w-full hover:opacity-30 "
+                />
                 <div className="py-3">
-                  <div className="text-lg font-semibold">Bandana ft Asake</div>
-                  <div>Fireboy DML </div>
+                  <div className="text-lg font-semibold">Mapariwo</div>
+                  <div>Zinolesky</div>
                 </div>
               </div>
               {/* </SwiperSlide> */}
@@ -346,47 +371,71 @@ const Home = () => {
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3">
-              <div className="bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300 ">
-                <img src={Tattoo} alt="Nasty" className="w-full " />
+              <div className="bg-[#b8b4b415] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300 ">
+                <img
+                  src={Tattoo}
+                  alt="Nasty"
+                  className="w-full hover:opacity-30"
+                />
                 <div className="py-3">
                   <div className="text-lg font-semibold">Somebody</div>
                   <div>Nasty C</div>
                 </div>
               </div>
 
-              <div className="bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
-                <img src={Asake} alt="Asake" className="w-full " />
+              <div className="bg-[#b8b4b415] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
+                <img
+                  src={Asake}
+                  alt="Asake"
+                  className="w-full hover:opacity-30"
+                />
                 <div className="py-3">
                   <div className="text-lg font-semibold">Terminator</div>
                   <div>Asake</div>
                 </div>
               </div>
 
-              <div className="bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2  cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
-                <img src={Zino} alt="Zino" className="w-full " />
+              <div className="bg-[#b8b4b415] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2  cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
+                <img
+                  src={Zino}
+                  alt="Zino"
+                  className="w-full hover:opacity-30"
+                />
                 <div className="py-3">
                   <div className="text-lg font-semibold">Call on Duty</div>
                   <div>Zinolesky</div>
                 </div>
               </div>
 
-              <div className="bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2  cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
-                <img src={Asa2} alt="Bimpe" className="w-full " />
+              <div className="bg-[#b8b4b415] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2  cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
+                <img
+                  src={Asa2}
+                  alt="Bimpe"
+                  className="w-full hover:opacity-30"
+                />
                 <div className="py-3">
                   <div className="text-lg font-semibold">Bimpe</div>
                   <div>Asa</div>
                 </div>
               </div>
 
-              <div className="lg:hidden xl:hidden bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
-                <img src={Bandana} alt="Fireboy" className="w-full" />
+              <div className="lg:hidden xl:hidden bg-[#b8b4b415] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
+                <img
+                  src={Bandana}
+                  alt="Fireboy"
+                  className="w-full hover:opacity-30"
+                />
                 <div className="py-3 hidden sm:block">
                   <div className="text-lg font-semibold">Friday Feeling</div>
                   <div>Fireboy DML </div>
                 </div>
               </div>
-              <div className="lg:hidden xl:hidden bg-[#5b585815] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
-                <img src={Rush} alt="Rush" className="w-full" />
+              <div className="lg:hidden xl:hidden bg-[#b8b4b415] rounded-md hover:bg-[#5B585833] hover:shadow-lg hover:rounded-md p-2 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-300">
+                <img
+                  src={Rush}
+                  alt="Rush"
+                  className="w-full hover:opacity-30"
+                />
                 <div className="py-3">
                   <div className="text-lg font-semibold">Stability</div>
                   <div>Ayra Star</div>

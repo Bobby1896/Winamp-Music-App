@@ -1,9 +1,10 @@
 import React from "react";
+import LogOut from "./LogOut";
 import { FaRegCopyright } from "react-icons/fa";
 
 function SideBar() {
   return (
-    <div className=" flex flex-col items-center gap-7 pt-10 md:pt-0 text-[#F3E7E7] ">
+    <div className=" flex flex-col bg-fixed items-center gap-7 pt-10 md:pt-0 text-[#F3E7E7] ">
       <div className="">
         <div className="">
           <div className="hidden md:block mt-5 mb-5 md:mb-2 pr-16 uppercase text-center">
