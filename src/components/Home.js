@@ -18,13 +18,24 @@ import Zino from "../images/Zino.png";
 import Rush from "../images/Rush.png";
 import SideBar from "./SideBar";
 import Footer from "./Footer";
-import { Link } from "react-router-dom";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { HomeSvg, BlufSvg, PodcastSvg } from "./svgs";
+import { FaPauseCircle, FaPlay, FaEllipsisV } from "react-icons/fa";
 
 const Home = () => {
   const [open, setOpen] = useState(false);
+  const [openElipses, setOpenElipses] = useState(false);
+  const [download, setDownload] = useState(false);
+  const [isPlaying, setPlaying] = useState(false);
 
+  const clickPlayPause = () => {
+    setPlaying(!isPlaying);
+  };
+  const clickDownload = () => {
+    setDownload(!download);
+  };
+  const handleClick = () => {
+    alert("here");
+    // setOpenElipses(!openElipses);
+  };
   return (
     <div className="container grid grid-cols-none md:grid-cols-12 justify-center sm:gap-3 md:gap-5  h-full sm:ml-7 md:ml-0 md:pr-5">
       {/* Column one */}
@@ -471,45 +482,16 @@ const Home = () => {
                     </div>
 
                     <div className="flex flex-row gap-4 items-center">
-                      <div className=" ">
-                        <svg
-                          width="18"
-                          height="18"
-                          viewBox="0 0 12 12"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M11.8333 11.8333H0.166626V10.1667H11.8333V11.8333ZM4.33329 8.01666L0.999959 4.68332L2.17496 3.50832L4.33329 5.65832L9.82496 0.166656L11 1.34999L4.33329 8.01666Z"
-                            fill="#F3E7E7"
-                          />
-                        </svg>
+                      <div className="cursor-pointer" onClick={clickDownload}>
+                        {download ? (
+                          <FaPauseCircle size="20px" />
+                        ) : (
+                          <FaPlay size="20px" />
+                        )}
                       </div>
 
-                      <div className=" cursor-pointer">
-                        <svg
-                          width="8"
-                          height="20"
-                          viewBox="0 0 4 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.16659 2.33333C1.16659 2.79357 1.53968 3.16667 1.99992 3.16667C2.46016 3.16667 2.83325 2.79357 2.83325 2.33333C2.83325 1.8731 2.46016 1.5 1.99992 1.5C1.53968 1.5 1.16659 1.8731 1.16659 2.33333Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 9.00001C1.16659 9.46024 1.53968 9.83334 1.99992 9.83334C2.46016 9.83334 2.83325 9.46024 2.83325 9.00001C2.83325 8.53977 2.46016 8.16667 1.99992 8.16667C1.53968 8.16667 1.16659 8.53977 1.16659 9.00001Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 15.6667C1.16659 16.1269 1.53968 16.5 1.99992 16.5C2.46016 16.5 2.83325 16.1269 2.83325 15.6667C2.83325 15.2064 2.46016 14.8333 1.99992 14.8333C1.53968 14.8333 1.16659 15.2064 1.16659 15.6667Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                        </svg>
+                      <div className=" cursor-pointer" onClick={handleClick}>
+                        <FaEllipsisV size="24px" />
                       </div>
                     </div>
                   </div>
@@ -529,48 +511,12 @@ const Home = () => {
                     </div>
 
                     <div className="flex flex-row gap-4 items-center">
-                      <div className=" ">
-                        <svg
-                          width="14"
-                          height="17"
-                          viewBox="0 0 14 17"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.0625 15.5625H12.3125M1.6875 7.4375L6.6875 11.8125L11.6875 7.4375M6.6875 1.1875V11.8125"
-                            stroke="#F3E7E7"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
+                      <div className="cursor-pointer ">
+                        <FaPlay size="20px" />
                       </div>
 
                       <div className=" cursor-pointer">
-                        <svg
-                          width="8"
-                          height="20"
-                          viewBox="0 0 4 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.16659 2.33333C1.16659 2.79357 1.53968 3.16667 1.99992 3.16667C2.46016 3.16667 2.83325 2.79357 2.83325 2.33333C2.83325 1.8731 2.46016 1.5 1.99992 1.5C1.53968 1.5 1.16659 1.8731 1.16659 2.33333Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 9.00001C1.16659 9.46024 1.53968 9.83334 1.99992 9.83334C2.46016 9.83334 2.83325 9.46024 2.83325 9.00001C2.83325 8.53977 2.46016 8.16667 1.99992 8.16667C1.53968 8.16667 1.16659 8.53977 1.16659 9.00001Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 15.6667C1.16659 16.1269 1.53968 16.5 1.99992 16.5C2.46016 16.5 2.83325 16.1269 2.83325 15.6667C2.83325 15.2064 2.46016 14.8333 1.99992 14.8333C1.53968 14.8333 1.16659 15.2064 1.16659 15.6667Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                        </svg>
+                        <FaEllipsisV size="24px" />
                       </div>
                     </div>
                   </div>
@@ -590,48 +536,16 @@ const Home = () => {
                     </div>
 
                     <div className="flex flex-row gap-4 items-center">
-                      <div className=" ">
-                        <svg
-                          width="14"
-                          height="17"
-                          viewBox="0 0 14 17"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.0625 15.5625H12.3125M1.6875 7.4375L6.6875 11.8125L11.6875 7.4375M6.6875 1.1875V11.8125"
-                            stroke="#F3E7E7"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
+                      <div className=" cursor-pointer" onClick={clickDownload}>
+                        {download ? (
+                          <FaPlay size="20px" />
+                        ) : (
+                          <FaPauseCircle size="20px" />
+                        )}
                       </div>
 
                       <div className=" cursor-pointer">
-                        <svg
-                          width="8"
-                          height="20"
-                          viewBox="0 0 4 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.16659 2.33333C1.16659 2.79357 1.53968 3.16667 1.99992 3.16667C2.46016 3.16667 2.83325 2.79357 2.83325 2.33333C2.83325 1.8731 2.46016 1.5 1.99992 1.5C1.53968 1.5 1.16659 1.8731 1.16659 2.33333Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 9.00001C1.16659 9.46024 1.53968 9.83334 1.99992 9.83334C2.46016 9.83334 2.83325 9.46024 2.83325 9.00001C2.83325 8.53977 2.46016 8.16667 1.99992 8.16667C1.53968 8.16667 1.16659 8.53977 1.16659 9.00001Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 15.6667C1.16659 16.1269 1.53968 16.5 1.99992 16.5C2.46016 16.5 2.83325 16.1269 2.83325 15.6667C2.83325 15.2064 2.46016 14.8333 1.99992 14.8333C1.53968 14.8333 1.16659 15.2064 1.16659 15.6667Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                        </svg>
+                        <FaEllipsisV size="24px" />
                       </div>
                     </div>
                   </div>
@@ -651,48 +565,12 @@ const Home = () => {
                     </div>
 
                     <div className="flex flex-row gap-4 items-center">
-                      <div className=" ">
-                        <svg
-                          width="14"
-                          height="17"
-                          viewBox="0 0 14 17"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.0625 15.5625H12.3125M1.6875 7.4375L6.6875 11.8125L11.6875 7.4375M6.6875 1.1875V11.8125"
-                            stroke="#F3E7E7"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
+                      <div className="cursor-pointer ">
+                        <FaPauseCircle size="20px" />
                       </div>
 
                       <div className=" cursor-pointer">
-                        <svg
-                          width="8"
-                          height="20"
-                          viewBox="0 0 4 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.16659 2.33333C1.16659 2.79357 1.53968 3.16667 1.99992 3.16667C2.46016 3.16667 2.83325 2.79357 2.83325 2.33333C2.83325 1.8731 2.46016 1.5 1.99992 1.5C1.53968 1.5 1.16659 1.8731 1.16659 2.33333Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 9.00001C1.16659 9.46024 1.53968 9.83334 1.99992 9.83334C2.46016 9.83334 2.83325 9.46024 2.83325 9.00001C2.83325 8.53977 2.46016 8.16667 1.99992 8.16667C1.53968 8.16667 1.16659 8.53977 1.16659 9.00001Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 15.6667C1.16659 16.1269 1.53968 16.5 1.99992 16.5C2.46016 16.5 2.83325 16.1269 2.83325 15.6667C2.83325 15.2064 2.46016 14.8333 1.99992 14.8333C1.53968 14.8333 1.16659 15.2064 1.16659 15.6667Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                        </svg>
+                        <FaEllipsisV size="24px" />
                       </div>
                     </div>
                   </div>
@@ -712,45 +590,12 @@ const Home = () => {
                     </div>
 
                     <div className="flex flex-row gap-4 items-center">
-                      <div className="">
-                        <svg
-                          width="18"
-                          height="18"
-                          viewBox="0 0 12 12"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M11.8333 11.8333H0.166626V10.1667H11.8333V11.8333ZM4.33329 8.01666L0.999959 4.68332L2.17496 3.50832L4.33329 5.65832L9.82496 0.166656L11 1.34999L4.33329 8.01666Z"
-                            fill="#F3E7E7"
-                          />
-                        </svg>
+                      <div className="cursor-pointer">
+                        <FaPlay size="20px" />
                       </div>
 
                       <div className=" cursor-pointer">
-                        <svg
-                          width="8"
-                          height="20"
-                          viewBox="0 0 4 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.16659 2.33333C1.16659 2.79357 1.53968 3.16667 1.99992 3.16667C2.46016 3.16667 2.83325 2.79357 2.83325 2.33333C2.83325 1.8731 2.46016 1.5 1.99992 1.5C1.53968 1.5 1.16659 1.8731 1.16659 2.33333Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 9.00001C1.16659 9.46024 1.53968 9.83334 1.99992 9.83334C2.46016 9.83334 2.83325 9.46024 2.83325 9.00001C2.83325 8.53977 2.46016 8.16667 1.99992 8.16667C1.53968 8.16667 1.16659 8.53977 1.16659 9.00001Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 15.6667C1.16659 16.1269 1.53968 16.5 1.99992 16.5C2.46016 16.5 2.83325 16.1269 2.83325 15.6667C2.83325 15.2064 2.46016 14.8333 1.99992 14.8333C1.53968 14.8333 1.16659 15.2064 1.16659 15.6667Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                        </svg>
+                        <FaEllipsisV size="24px" />
                       </div>
                     </div>
                   </div>
@@ -777,44 +622,18 @@ const Home = () => {
                     </div>
 
                     <div className="flex flex-row gap-4 items-center">
-                      <div className=" ">
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 20 20"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M4.375 17.5C4.20924 17.5 4.05027 17.4342 3.93306 17.3169C3.81585 17.1997 3.75 17.0408 3.75 16.875V3.125C3.75002 3.01639 3.77834 2.90967 3.83217 2.81534C3.886 2.72101 3.96348 2.64234 4.05697 2.58707C4.15047 2.53181 4.25675 2.50186 4.36534 2.50018C4.47394 2.4985 4.58109 2.52515 4.67625 2.5775L17.1763 9.4525C17.2742 9.50645 17.356 9.58572 17.4129 9.68202C17.4698 9.77832 17.4998 9.88814 17.4998 10C17.4998 10.1119 17.4698 10.2217 17.4129 10.318C17.356 10.4143 17.2742 10.4935 17.1763 10.5475L4.67625 17.4225C4.58397 17.4733 4.48034 17.5 4.375 17.5Z"
-                            fill="#F3E7E7"
-                          />
-                        </svg>
+                      <div className="cursor-pointer" onClick={clickPlayPause}>
+                        <audio src="https://9jaflaver.com/wp-content/uploads/2021/12/Asa_Mayana_9jaflaver.com_.mp3" />
+                        {isPlaying ? (
+                          <div>
+                            <FaPauseCircle size="20px" />
+                          </div>
+                        ) : (
+                          <FaPlay size="20px" />
+                        )}
                       </div>
                       <div className=" cursor-pointer">
-                        <svg
-                          width="8"
-                          height="20"
-                          viewBox="0 0 4 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.16659 2.33333C1.16659 2.79357 1.53968 3.16667 1.99992 3.16667C2.46016 3.16667 2.83325 2.79357 2.83325 2.33333C2.83325 1.8731 2.46016 1.5 1.99992 1.5C1.53968 1.5 1.16659 1.8731 1.16659 2.33333Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 9.00001C1.16659 9.46024 1.53968 9.83334 1.99992 9.83334C2.46016 9.83334 2.83325 9.46024 2.83325 9.00001C2.83325 8.53977 2.46016 8.16667 1.99992 8.16667C1.53968 8.16667 1.16659 8.53977 1.16659 9.00001Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 15.6667C1.16659 16.1269 1.53968 16.5 1.99992 16.5C2.46016 16.5 2.83325 16.1269 2.83325 15.6667C2.83325 15.2064 2.46016 14.8333 1.99992 14.8333C1.53968 14.8333 1.16659 15.2064 1.16659 15.6667Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                        </svg>
+                        <FaEllipsisV size="24px" />
                       </div>
                     </div>
                   </div>
@@ -834,45 +653,12 @@ const Home = () => {
                     </div>
 
                     <div className="flex flex-row gap-4 items-center">
-                      <div className=" ">
-                        <svg
-                          width="18"
-                          height="18"
-                          viewBox="0 0 12 12"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M11.8333 11.8333H0.166626V10.1667H11.8333V11.8333ZM4.33329 8.01666L0.999959 4.68332L2.17496 3.50832L4.33329 5.65832L9.82496 0.166656L11 1.34999L4.33329 8.01666Z"
-                            fill="#F3E7E7"
-                          />
-                        </svg>
+                      <div className="cursor-pointer ">
+                        <FaPauseCircle size="20px" />
                       </div>
 
                       <div className=" cursor-pointer">
-                        <svg
-                          width="8"
-                          height="20"
-                          viewBox="0 0 4 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.16659 2.33333C1.16659 2.79357 1.53968 3.16667 1.99992 3.16667C2.46016 3.16667 2.83325 2.79357 2.83325 2.33333C2.83325 1.8731 2.46016 1.5 1.99992 1.5C1.53968 1.5 1.16659 1.8731 1.16659 2.33333Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 9.00001C1.16659 9.46024 1.53968 9.83334 1.99992 9.83334C2.46016 9.83334 2.83325 9.46024 2.83325 9.00001C2.83325 8.53977 2.46016 8.16667 1.99992 8.16667C1.53968 8.16667 1.16659 8.53977 1.16659 9.00001Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 15.6667C1.16659 16.1269 1.53968 16.5 1.99992 16.5C2.46016 16.5 2.83325 16.1269 2.83325 15.6667C2.83325 15.2064 2.46016 14.8333 1.99992 14.8333C1.53968 14.8333 1.16659 15.2064 1.16659 15.6667Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                        </svg>
+                        <FaEllipsisV size="24px" />
                       </div>
                     </div>
                   </div>
@@ -892,48 +678,12 @@ const Home = () => {
                     </div>
 
                     <div className="flex flex-row gap-4 items-center">
-                      <div className=" ">
-                        <svg
-                          width="14"
-                          height="17"
-                          viewBox="0 0 14 17"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.0625 15.5625H12.3125M1.6875 7.4375L6.6875 11.8125L11.6875 7.4375M6.6875 1.1875V11.8125"
-                            stroke="#F3E7E7"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
+                      <div className="cursor-pointer ">
+                        <FaPauseCircle size="20px" />
                       </div>
 
                       <div className=" cursor-pointer">
-                        <svg
-                          width="8"
-                          height="20"
-                          viewBox="0 0 4 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.16659 2.33333C1.16659 2.79357 1.53968 3.16667 1.99992 3.16667C2.46016 3.16667 2.83325 2.79357 2.83325 2.33333C2.83325 1.8731 2.46016 1.5 1.99992 1.5C1.53968 1.5 1.16659 1.8731 1.16659 2.33333Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 9.00001C1.16659 9.46024 1.53968 9.83334 1.99992 9.83334C2.46016 9.83334 2.83325 9.46024 2.83325 9.00001C2.83325 8.53977 2.46016 8.16667 1.99992 8.16667C1.53968 8.16667 1.16659 8.53977 1.16659 9.00001Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 15.6667C1.16659 16.1269 1.53968 16.5 1.99992 16.5C2.46016 16.5 2.83325 16.1269 2.83325 15.6667C2.83325 15.2064 2.46016 14.8333 1.99992 14.8333C1.53968 14.8333 1.16659 15.2064 1.16659 15.6667Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                        </svg>
+                        <FaEllipsisV size="24px" />
                       </div>
                     </div>
                   </div>
@@ -953,48 +703,12 @@ const Home = () => {
                     </div>
 
                     <div className="flex flex-row gap-4 items-center">
-                      <div className=" ">
-                        <svg
-                          width="14"
-                          height="17"
-                          viewBox="0 0 14 17"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.0625 15.5625H12.3125M1.6875 7.4375L6.6875 11.8125L11.6875 7.4375M6.6875 1.1875V11.8125"
-                            stroke="#F3E7E7"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
+                      <div className="cursor-pointer ">
+                        <FaPlay size="20px" />
                       </div>
 
                       <div className=" cursor-pointer">
-                        <svg
-                          width="8"
-                          height="20"
-                          viewBox="0 0 4 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.16659 2.33333C1.16659 2.79357 1.53968 3.16667 1.99992 3.16667C2.46016 3.16667 2.83325 2.79357 2.83325 2.33333C2.83325 1.8731 2.46016 1.5 1.99992 1.5C1.53968 1.5 1.16659 1.8731 1.16659 2.33333Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 9.00001C1.16659 9.46024 1.53968 9.83334 1.99992 9.83334C2.46016 9.83334 2.83325 9.46024 2.83325 9.00001C2.83325 8.53977 2.46016 8.16667 1.99992 8.16667C1.53968 8.16667 1.16659 8.53977 1.16659 9.00001Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 15.6667C1.16659 16.1269 1.53968 16.5 1.99992 16.5C2.46016 16.5 2.83325 16.1269 2.83325 15.6667C2.83325 15.2064 2.46016 14.8333 1.99992 14.8333C1.53968 14.8333 1.16659 15.2064 1.16659 15.6667Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                        </svg>
+                        <FaEllipsisV size="24px" />
                       </div>
                     </div>
                   </div>
@@ -1010,45 +724,12 @@ const Home = () => {
                     </div>
 
                     <div className="flex flex-row gap-4 items-center">
-                      <div className=" ">
-                        <svg
-                          width="18"
-                          height="18"
-                          viewBox="0 0 12 12"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M11.8333 11.8333H0.166626V10.1667H11.8333V11.8333ZM4.33329 8.01666L0.999959 4.68332L2.17496 3.50832L4.33329 5.65832L9.82496 0.166656L11 1.34999L4.33329 8.01666Z"
-                            fill="#F3E7E7"
-                          />
-                        </svg>
+                      <div className="cursor-pointer ">
+                        <FaPauseCircle size="20px" />
                       </div>
 
                       <div className=" cursor-pointer">
-                        <svg
-                          width="8"
-                          height="20"
-                          viewBox="0 0 4 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.16659 2.33333C1.16659 2.79357 1.53968 3.16667 1.99992 3.16667C2.46016 3.16667 2.83325 2.79357 2.83325 2.33333C2.83325 1.8731 2.46016 1.5 1.99992 1.5C1.53968 1.5 1.16659 1.8731 1.16659 2.33333Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 9.00001C1.16659 9.46024 1.53968 9.83334 1.99992 9.83334C2.46016 9.83334 2.83325 9.46024 2.83325 9.00001C2.83325 8.53977 2.46016 8.16667 1.99992 8.16667C1.53968 8.16667 1.16659 8.53977 1.16659 9.00001Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 15.6667C1.16659 16.1269 1.53968 16.5 1.99992 16.5C2.46016 16.5 2.83325 16.1269 2.83325 15.6667C2.83325 15.2064 2.46016 14.8333 1.99992 14.8333C1.53968 14.8333 1.16659 15.2064 1.16659 15.6667Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                        </svg>
+                        <FaEllipsisV size="24px" />
                       </div>
                     </div>
                   </div>
@@ -1064,45 +745,12 @@ const Home = () => {
                     </div>
 
                     <div className="flex flex-row gap-4 items-center">
-                      <div className=" ">
-                        <svg
-                          width="18"
-                          height="18"
-                          viewBox="0 0 12 12"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M11.8333 11.8333H0.166626V10.1667H11.8333V11.8333ZM4.33329 8.01666L0.999959 4.68332L2.17496 3.50832L4.33329 5.65832L9.82496 0.166656L11 1.34999L4.33329 8.01666Z"
-                            fill="#F3E7E7"
-                          />
-                        </svg>
+                      <div className="cursor-pointer ">
+                        <FaPlay size="20px" />
                       </div>
 
                       <div className=" cursor-pointer">
-                        <svg
-                          width="8"
-                          height="20"
-                          viewBox="0 0 4 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.16659 2.33333C1.16659 2.79357 1.53968 3.16667 1.99992 3.16667C2.46016 3.16667 2.83325 2.79357 2.83325 2.33333C2.83325 1.8731 2.46016 1.5 1.99992 1.5C1.53968 1.5 1.16659 1.8731 1.16659 2.33333Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 9.00001C1.16659 9.46024 1.53968 9.83334 1.99992 9.83334C2.46016 9.83334 2.83325 9.46024 2.83325 9.00001C2.83325 8.53977 2.46016 8.16667 1.99992 8.16667C1.53968 8.16667 1.16659 8.53977 1.16659 9.00001Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 15.6667C1.16659 16.1269 1.53968 16.5 1.99992 16.5C2.46016 16.5 2.83325 16.1269 2.83325 15.6667C2.83325 15.2064 2.46016 14.8333 1.99992 14.8333C1.53968 14.8333 1.16659 15.2064 1.16659 15.6667Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                        </svg>
+                        <FaEllipsisV size="24px" />
                       </div>
                     </div>
                   </div>
@@ -1110,11 +758,7 @@ const Home = () => {
                 <li className="flex flex-col mt-5">
                   <div className="flex flex-row justify-between hover:bg-[#5B585833] hover: h-14 hover: w-full">
                     <div className="flex flex-row gap-3">
-                      <img
-                        className=" w-14 rounded-md"
-                        src={Justin}
-                        alt="Rush"
-                      />
+                      <img className=" w-14 rounded-md" src={Justin} alt="ye" />
                       <div>
                         <div className=" text-lg">Ye</div>
                         <div className="text-sm">Burna Boy</div>
@@ -1122,44 +766,11 @@ const Home = () => {
                     </div>
 
                     <div className="flex flex-row gap-4 items-center">
-                      <div className=" ">
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 20 20"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M4.375 17.5C4.20924 17.5 4.05027 17.4342 3.93306 17.3169C3.81585 17.1997 3.75 17.0408 3.75 16.875V3.125C3.75002 3.01639 3.77834 2.90967 3.83217 2.81534C3.886 2.72101 3.96348 2.64234 4.05697 2.58707C4.15047 2.53181 4.25675 2.50186 4.36534 2.50018C4.47394 2.4985 4.58109 2.52515 4.67625 2.5775L17.1763 9.4525C17.2742 9.50645 17.356 9.58572 17.4129 9.68202C17.4698 9.77832 17.4998 9.88814 17.4998 10C17.4998 10.1119 17.4698 10.2217 17.4129 10.318C17.356 10.4143 17.2742 10.4935 17.1763 10.5475L4.67625 17.4225C4.58397 17.4733 4.48034 17.5 4.375 17.5Z"
-                            fill="#F3E7E7"
-                          />
-                        </svg>
+                      <div className="cursor-pointer ">
+                        <FaPauseCircle size="20px" />
                       </div>
                       <div className=" cursor-pointer">
-                        <svg
-                          width="8"
-                          height="20"
-                          viewBox="0 0 4 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.16659 2.33333C1.16659 2.79357 1.53968 3.16667 1.99992 3.16667C2.46016 3.16667 2.83325 2.79357 2.83325 2.33333C2.83325 1.8731 2.46016 1.5 1.99992 1.5C1.53968 1.5 1.16659 1.8731 1.16659 2.33333Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 9.00001C1.16659 9.46024 1.53968 9.83334 1.99992 9.83334C2.46016 9.83334 2.83325 9.46024 2.83325 9.00001C2.83325 8.53977 2.46016 8.16667 1.99992 8.16667C1.53968 8.16667 1.16659 8.53977 1.16659 9.00001Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M1.16659 15.6667C1.16659 16.1269 1.53968 16.5 1.99992 16.5C2.46016 16.5 2.83325 16.1269 2.83325 15.6667C2.83325 15.2064 2.46016 14.8333 1.99992 14.8333C1.53968 14.8333 1.16659 15.2064 1.16659 15.6667Z"
-                            stroke="#F3E7E7"
-                            stroke-width="2"
-                          />
-                        </svg>
+                        <FaEllipsisV size="24px" />
                       </div>
                     </div>
                   </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import LogOut from "./LogOut";
-import { FaRegCopyright } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function SideBar() {
   return (
@@ -29,9 +29,7 @@ function SideBar() {
                     ></path>
                   </svg>
                 </div>
-                <a className="" href="#">
-                  Home
-                </a>
+                <Link to={"/"}>Home</Link>
               </div>
             </li>
             <li className="pb-2 md:pb-1 ">
@@ -50,7 +48,7 @@ function SideBar() {
                     />
                   </svg>
                 </div>
-                <a href="#">Explore</a>
+                <Link to={"/explore"}>Explore</Link>
               </div>
             </li>
             <li className="pb-2 md:pb-1">
@@ -81,7 +79,7 @@ function SideBar() {
                     />
                   </svg>
                 </div>
-                <a href="#">Podcast</a>
+                <Link to={"/podcast"}>Podcast</Link>
               </div>
             </li>
             <li className="pb-2 md:pb-1">
@@ -104,7 +102,7 @@ function SideBar() {
                     />
                   </svg>
                 </div>
-                <a href="#">Playlist</a>
+                <Link to={"/podcast"}>Playlist</Link>
               </div>
             </li>
             <li className="pb-2 md:pb-1">
@@ -125,7 +123,7 @@ function SideBar() {
                     ></path>
                   </svg>
                 </div>
-                <a href="#">Favourites</a>
+                <Link to={"/favourites"}>Favourites</Link>
               </div>
             </li>
             <li className="pb-2 md:pb-1">
@@ -144,7 +142,7 @@ function SideBar() {
                     />
                   </svg>
                 </div>
-                <a href="#">Library</a>
+                <Link to={"/library"}>Library</Link>
               </div>
             </li>
           </ul>
@@ -175,7 +173,7 @@ function SideBar() {
                     />
                   </svg>
                 </div>
-                <a href="#">Traffic Vibez</a>
+                <Link to={"/vibez"}>Vibez</Link>
               </div>
             </li>
             <li className="pb-2 md:pb-1">
@@ -198,7 +196,7 @@ function SideBar() {
                     />
                   </svg>
                 </div>
-                <a href="#">Work</a>
+                <Link to={"/work"}>Work</Link>
               </div>
             </li>
             <li className="pb-2 md:pb-1">
@@ -264,7 +262,9 @@ function SideBar() {
               />
             </svg>
           </div>
-          <div className="">Logout</div>
+          <div className="">
+            <Link to={"logout"}> Logout</Link>
+          </div>
         </div>
       </div>
 

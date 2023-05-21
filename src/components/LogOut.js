@@ -1,16 +1,9 @@
-// import React from "react";
-// import SideBar from "./SideBar";
+import React from "react";
+import SideBar from "./SideBar";
+import bg from "../images/bg.jpg";
 
-// function LogOut() {
-//   return (
-//     <div className="grid grid-cols-12">
-//       <div className="col-span-2">
-//         <SideBar />
-//       </div>
+function LogOut() {
+  return <div className=" bg-[url('./images/bg.jpg')]"></div>;
+}
 
-//       <div className="col-span 10">Nothing For Now</div>
-//     </div>
-//   );
-// }
-
-// export default LogOut;
+export default LogOut;
