@@ -51,7 +51,7 @@ function LogOut() {
           <div className="bg-[#b7b2b233] text-[#b7b2b233] hover:text-white hover:bg-[#5B585833] text-center h-14 py-3 rounded-md text-2xl font-bold cursor-pointer mb-3">
             <Link to="/">Sign In</Link>
           </div>
-          <div className=" cursor-pointer text-lg md:text-xl lg:text-2xl">
+          <div className=" cursor-pointer hover:underline text-lg md:text-xl lg:text-2xl">
             Forgot Password?
           </div>
 
@@ -68,7 +68,7 @@ function LogOut() {
           </div>
 
           <div className="text-lg md:text-xl lg:text-2xl font-bold text-center hover:underline text-white mt-3 cursor-pointer hover:text-#b7b2b233">
-            Create Account
+            <Link to="/createAccount">Create Account</Link>
           </div>
         </div>
       </div>
