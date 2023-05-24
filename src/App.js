@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./components/Home";
 import LogOut from "./components/LogOut";
 import CreateAccount from "./components/CreateAccount";
+import OtherPages from "./components/OtherPages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/playlist" element={<AddPlaylist />}></Route> */}
         <Route path="/createAccount" element={<CreateAccount />}></Route>
         <Route path="/logout" element={<LogOut />}></Route>
+        <Route path="/others" element={<OtherPages />}></Route>
       </Routes>
     </Router>
   );

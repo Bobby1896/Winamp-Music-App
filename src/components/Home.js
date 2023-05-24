@@ -32,14 +32,12 @@ const Home = () => {
   const clickDownload = () => {
     setDownload(!download);
   };
-  const handleClick = () => {
-    alert("here");
-    // setOpenElipses(!openElipses);
-  };
+
+  // bg-[#17161A]
   return (
-    <div className="container grid grid-cols-none md:grid-cols-12 justify-center sm:gap-3 md:gap-5  h-full sm:ml-7 md:ml-0 md:pr-5">
+    <div className="container grid grid-cols-none md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 justify-center sm:gap-3 md:gap-5 h-full sm:ml-7 md:ml-0 md:pr-5">
       {/* Column one */}
-      <div className="text-lg bg-[#17161A] text-grey-300 pt-8 md:pt-5 col-span-2 md:col-span-3 lg:col-span-3 xl:col-span-2">
+      <div className="text-lg bg-[#17161A] text-grey-300 pt-8 md:pt-5 col-span-2 md:col-span-3 lg:col-span-3 xl:col-span-2 ">
         <div className="flex justify-center">
           <img
             className="hidden md:block fixed cursor-pointer "
@@ -173,7 +171,7 @@ const Home = () => {
             </div>
             <div className="mt-3 cursor-pointer">
               <svg
-                width=""
+                width="20"
                 height="8"
                 viewBox="0 0 16 8"
                 fill="none"
@@ -490,7 +488,7 @@ const Home = () => {
                         )}
                       </div>
 
-                      <div className=" cursor-pointer" onClick={handleClick}>
+                      <div className=" cursor-pointer">
                         <FaEllipsisV size="24px" />
                       </div>
                     </div>
