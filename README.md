@@ -19,7 +19,7 @@ Due to academic and professional commitments, development has been **temporarily
 
 * **JavaScript (React)** – Core logic and interactivit
 * **HTML5** – Page structure and audio integration
-* **CSS3** – Responsive styling and custom UI elements
+* **Tailwind** – Responsive styling and custom UI elements
 
 ---
 
